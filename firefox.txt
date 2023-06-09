@@ -1,0 +1,25 @@
+package firefo1;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class fox {
+	public static void main(String[] args) {
+		System.out.println("hai");
+		System.setProperty("webdriver.chrome.driver","C:\\selenium jar\\chromedriver_win32\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		//driver.get("https://www.google.com/");.
+		driver.manage().window().maximize();
+		driver.get("https://arms.sse.saveetha.com");
+		WebElement username=driver.findElement(By.id("txtusername"));
+		System.out.println(username);
+		WebElement password=driver.findElement(By.id("txtpassword"));
+		System.out.println(password);
+		WebElement login=driver.findElement(By.name("btnlogin"));
+		System.out.println(login);
+		username.sendKeys("192121119");
+		password.sendKeys("8526702291");
+		login.click();
+}
+}

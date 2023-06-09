@@ -1,0 +1,20 @@
+package test2;
+import static org.junit.Assert.assertTrue;
+import java.util.Scanner;
+public class cube {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n,sqrt,cube;
+		System.out.println("enter a number:");
+		n=sc.nextInt();
+		sqrt=n*n;
+		cube=n*n*n;
+		System.out.println("the square of the number="+sqrt);
+		System.out.println("the cube of the number="+cube);
+		assertTrue(4==sqrt);
+		assertTrue(8==cube);
+
+	}
+
+}
