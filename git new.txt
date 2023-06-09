@@ -1,0 +1,22 @@
+package github1;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class simp{
+    public static void main(String[] args) {
+
+    	System.setProperty("webdriver.chrome.driver","C:\\selenium jar\\chromedriver_win32\\chromedriver.exe");
+        
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://github.com");
+        driver.manage().window().maximize();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        driver.quit();
+    }
+}
